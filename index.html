@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Movie night</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="icon" href="images/icon.png">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-select">Welcome to <span class="movie">Movie</span><span class="night">night</span> </h1>
+        <h3 class="text-select">Hi khaled and malak</h3>
+        
+        <div id="player-container" class="player-wrapper">
+            <iframe  class="responsive-iframe"  src="https://drive.google.com/file/d/1mkiC4aw99ZJrCFcKLRG4itFUyB7nf-gk/preview" width="640" height="360" allow="autoplay"></iframe>
+        </div>
+        <div class="text-container">
+            <p class="text-select">This is your Movie night created by khaled so you can watch movies together wish you a good luck and nice movie</p>
+            <div class="buttons">
+              <button id="button1"><i class="fa-solid fa-play fa-bounce" style="color: #ff0095;"></i> Click Me</button>
+              <button id="button2"><i class="fa-solid fa-play" style="color: #ff0059;"></i> Click Me <i class="fa-solid fa-face-grin-squint-tears fa-shake" style="color: #ff0095;"></i></button>
+              <button id="button3"><i class="fa-solid fa-play" style="color: #ff0059;"></i> Click Me</button>
+            </div>
+          </div>
+          
+    </div>
+
+    <script>
+      const button1 = document.getElementById('button1');
+      button1.addEventListener('click', playSound1);
+
+      const button2 = document.getElementById('button2');
+      button2.addEventListener('click', playSound2);
+
+      const button3 = document.getElementById('button3');
+      button3.addEventListener('click', playSound3);
+
+      function playSound1() {
+        const audio = new Audio('Sounds/1.mp3');
+        audio.play();
+      }
+      function playSound2() {
+        const audio = new Audio('Sounds/2.mp3');
+        audio.play();
+      }
+      function playSound3() {
+        const audio = new Audio('Sounds/3.mp3');
+        audio.play();
+      }
+    </script>
+ 
+</body>
+</html>
