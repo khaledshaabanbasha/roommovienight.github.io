@@ -1,0 +1,382 @@
+/* Use a CSS reset to remove any default styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Use a variable to store the primary color */
+  :root {
+    --primary-color: #4CAF50;
+  }
+  
+  /* Set the font family and background color for the whole page */
+  body {
+    font-family: Arial, sans-serif;
+    text-shadow: 0px 0px 50px #b8a6f4;
+  }
+  
+  /* Use flexbox to center the content vertically */
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url("../images/background.png");
+    background-size: cover;
+    padding: 30px 0;
+  }
+  
+  
+  /* Use a heading hierarchy and adjust margin and padding */
+  h1 {
+    font-size: 2rem;
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-family: 'Dancing Script', cursive;
+  }
+  .movie{
+    color: #E11299;
+  }
+  .night{
+    color: #FCC8D1;
+  }
+  h3 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 40px;
+    font-family: 'Dancing Script', cursive;
+  }
+  
+  /* Use a CSS grid to center the paragraph and set a max-width */
+  p {
+    justify-self: center;
+    max-width: 300px;
+    margin-top: 80px;
+    padding: 10px;
+    color: #fff;
+    border-radius: 20px;
+    font-family: 'Bruno Ace', cursive;
+    flex: 1 1 300px;
+  }
+  
+  /* Use a wrapper to center the video container */
+  #player-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+  }
+  
+  /* Use a variable to store the video dimensions */
+  :root {
+    --video-width: 640px;
+    --video-height: 330px;
+  }
+  
+  /* Set the video container dimensions */
+  #player-container {
+    width: var(--video-width);
+    height: var(--video-height);
+    border-radius: 10px;
+    overflow: hidden;
+    border: none;
+    box-shadow: 0px 0px 32px 8px #4E31AA;
+  }
+  
+  /* Use a responsive iframe to resize the video */
+  .responsive-iframe {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: none;
+    user-select: none;
+    min-width: 100%;
+  }
+  .text-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .buttons {
+    display: flex;
+    gap: 10px;
+    width: auto;
+    
+  }
+  button{
+    color: #fff;
+    font-size: 1.2rem;
+    width: 130px;
+    background-color: #4E31AA;
+    border-radius: 10px;
+    border: none;
+    user-select: none;
+  }
+  .text-select{
+    user-select: none;
+  }
+  
+  /* Use a media query to adjust styles for smaller screens */
+  @media only screen and (max-width: 768px) {
+    /* Remove the margin from the body and container */
+    body, .container {
+      margin: 0;
+      text-shadow: 0px 0px 50px #b8a6f4;
+    }
+    .container{
+        background-image: url("../images/mobile-back.png");
+        background-size: cover;
+    }
+  
+    /* Adjust the heading sizes and margin */
+    h1 {
+      font-size: 1.5rem;
+      margin-top: 50px;
+
+      
+    }
+  
+    h3 {
+      font-size: 1.2rem;
+    }
+  p{
+    transform: translate(-10%);
+  }
+    /* Use a variable for the video container width */
+    :root {
+      --video-width: 80%;
+      --video-height: 200px;
+    }
+  
+    /* Use a wrapper to center the video container */
+    #player-wrapper {
+      margin-top: 10px;
+    }
+    .text-container {
+        /* Change flex-wrap to wrap so the buttons can move under the paragraph */
+        flex-wrap: wrap;
+      }
+      
+      .buttons {
+        /* Change display to block so the buttons stack vertically */
+        display: block;
+        margin-top: 10px; /* Add margin to separate the buttons from the paragraph */
+        transform: translate(0%);
+      }
+      button{
+        width: 80px;
+        font-size:12px;
+      }
+    }
+    @media only screen and (max-width: 480px) {
+        /* Remove the margin from the body and container */
+        body, .container {
+          margin: 0;
+          text-shadow: 0px 0px 50px #b8a6f4;
+        }
+        .container{
+            background-image: url("../images/mobile-back.png");
+            background-size: cover;
+        }
+      
+        /* Adjust the heading sizes and margin */
+        h1 {
+          font-size: 1.5rem;
+          margin-top: 50px;
+    
+          
+        }
+      
+        h3 {
+          font-size: 1.2rem;
+        }
+      p{
+        transform: translate(-2%);
+      }
+        /* Use a variable for the video container width */
+        :root {
+          --video-width: 80%;
+          --video-height: 200px;
+        }
+      
+        /* Use a wrapper to center the video container */
+        #player-wrapper {
+          margin-top: 10px;
+        }
+        .text-container {
+            /* Change flex-wrap to wrap so the buttons can move under the paragraph */
+            flex-wrap: wrap;
+          }
+          
+          .buttons {
+            /* Change display to block so the buttons stack vertically */
+            display: block;
+            margin-top: 10px; /* Add margin to separate the buttons from the paragraph */
+            transform: translate(-5%);
+          }
+          button{
+            width: 80px;
+            font-size:12px;
+          }
+        }
+        @media only screen and (max-width: 320px) {
+            /* Remove the margin from the body and container */
+            body, .container {
+              margin: 0;
+              text-shadow: 0px 0px 50px #b8a6f4;
+            }
+            .container{
+                background-image: url("../images/mobile-back.png");
+                background-size: cover;
+            }
+          
+            /* Adjust the heading sizes and margin */
+            h1 {
+              font-size: 1.5rem;
+              margin-top: 50px;
+        
+              
+            }
+          
+            h3 {
+              font-size: 1.2rem;
+            }
+          p{
+            transform: translate(-5%);
+          }
+            /* Use a variable for the video container width */
+            :root {
+              --video-width: 80%;
+              --video-height: 200px;
+            }
+          
+            /* Use a wrapper to center the video container */
+            #player-wrapper {
+              margin-top: 10px;
+            }
+            .text-container {
+                /* Change flex-wrap to wrap so the buttons can move under the paragraph */
+                flex-wrap: wrap;
+              }
+              
+              .buttons {
+                /* Change display to block so the buttons stack vertically */
+                display: block;
+                margin-top: 10px; /* Add margin to separate the buttons from the paragraph */
+                transform: translate(0%);
+
+              }
+              button{
+                width: 80px;
+                font-size:12px;
+              }
+            }
+            @media only screen and (max-width: 750px) {
+                /* Remove the margin from the body and container */
+                body, .container {
+                  margin: 0;
+                  text-shadow: 0px 0px 50px #b8a6f4;
+                }
+                .container{
+                    background-image: url("../images/mobile-back.png");
+                    background-size: cover;
+                }
+              
+                /* Adjust the heading sizes and margin */
+                h1 {
+                  font-size: 1.5rem;
+                  margin-top: 50px;
+            
+                  
+                }
+              
+                h3 {
+                  font-size: 1.2rem;
+                }
+              p{
+                transform: translate(-5%);
+              }
+                /* Use a variable for the video container width */
+                :root {
+                  --video-width: 80%;
+                  --video-height: 200px;
+                }
+              
+                /* Use a wrapper to center the video container */
+                #player-wrapper {
+                  margin-top: 10px;
+                }
+                .text-container {
+                    /* Change flex-wrap to wrap so the buttons can move under the paragraph */
+                    flex-wrap: wrap;
+                  }
+                  
+                  .buttons {
+                    /* Change display to block so the buttons stack vertically */
+                    display: block;
+                    margin-top: 10px; /* Add margin to separate the buttons from the paragraph */
+                    transform: translate(0%);
+                  }
+                  button{
+                    width: 80px;
+                    font-size:12px;
+                  }
+                }
+                @media only screen and (max-width: 211.2px) {
+                    /* Remove the margin from the body and container */
+                    body, .container {
+                      margin: 0;
+                      text-shadow: 0px 0px 50px #b8a6f4;
+                    }
+                    .container{
+                        background-image: url("../images/mobile-back.png");
+                        background-size: cover;
+                    }
+                  
+                    /* Adjust the heading sizes and margin */
+                    h1 {
+                      font-size: 1.5rem;
+                      margin-top: 50px;
+                
+                      
+                    }
+                  
+                    h3 {
+                      font-size: 1.2rem;
+                    }
+                  p{
+                    transform: translate(5%);
+                  }
+                    /* Use a variable for the video container width */
+                    :root {
+                      --video-width: 80%;
+                      --video-height: 200px;
+                    }
+                  
+                    /* Use a wrapper to center the video container */
+                    #player-wrapper {
+                      margin-top: 10px;
+                    }
+                    .text-container {
+                        /* Change flex-wrap to wrap so the buttons can move under the paragraph */
+                        flex-wrap: wrap;
+                      }
+                      
+                      .buttons {
+                        /* Change display to block so the buttons stack vertically */
+                        display: block;
+                        margin-top: 10px; /* Add margin to separate the buttons from the paragraph */
+                        transform: translate(0%);
+                    
+                      }
+                      button{
+                        width: 80px;
+                        font-size:12px;
+                      }
+                    }
+               
+           
+               
